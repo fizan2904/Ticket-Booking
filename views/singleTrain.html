@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train</title>
+</head>
+<body>
+
+<h2>
+	<%- train.train_name %>
+</h2>
+<p>
+	From: <%- train.train_schedule[0].from_place %><br>
+	Time: <%- train.train_schedule[0].from_time %><br>
+	To : <%- train.train_schedule[0].to_place %><br>
+	Time : <%- train.train_schedule[0].to_time %><br>
+
+	Seats Taken : <%- train.train_schedule[0].seates_taken %>
+
+</p>
+
+</body>
+</html>

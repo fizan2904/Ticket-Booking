@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Railways</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+<% if(flash){
+	if(error_msg){
+		for(var i=0;i<error_msg.length;i++){%>
+			<%= error_msg[i] %>
+	<% }
+	}else if(success_msg){ %>
+		<%= success_msg %>
+	<% }else{ %>
+		<h1>
+	<%} 
+} %>
+
+<form method="post" action="/users/login">
+	<div class="form-group">
+		<label for="username" class="control-label">Username</label>
+		<input type="text" name="username" class="form-control">
+	</div>
+	<div class="form-group">
+		<label for="password" class="control-label">Password</label>
+		<input type="text" name="password" class="form-control">
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+<table>
+	<tr>
+		<th>
+			Name of the train
+		</th>
+		<th>
+			Journey Date
+		</th>
+		<th>
+			Departure
+		</th>
+		<th>
+			Departure Time
+		</th>
+		<th>
+			Arrival
+		</th>
+		<th>
+			Arrival Time
+		</th>
+		<th>
+			Booking
+		</th>
+	</tr>
+	<% for(var i=0;i<train.length;i++){ %>
+		<tr>
+			<th>
+				<a href="/train/list/<%- train[i]._id %>"><%- train[i].train_name %></a>
+			</th>
+			<th>
+				<%- train[i].train_schedule[0].doj %>
+			</th>
+			<th>
+				<%- train[i].train_schedule[0].from_place %>
+			</th>
+			<th>
+				<%- train[i].train_schedule[0].from_time %>
+			</th>
+			<th>
+				<%- train[i].train_schedule[0].to_place %>
+			</th>
+			<th>
+				<%- train[i].train_schedule[0].to_time %>
+			</th>
+			<th>
+				<a href="/ticket/add/<%- train[i]._id %>"><button class="btn btn-primary">Booking<button></a>
+			</th>
+		</tr>
+	<% } %>
+</table>
+
+</body>
+</html>
